@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I was born" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-BR-hu7">
-                                <rect key="frame" x="167.5" y="108" width="79" height="21"/>
+                                <rect key="frame" x="167.5" y="160" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since that day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-Vb-yde">
-                                <rect key="frame" x="152.5" y="277" width="109" height="21"/>
+                                <rect key="frame" x="152.5" y="329" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A79-pE-pOO">
-                                <rect key="frame" x="57" y="303" width="300" height="18"/>
+                                <rect key="frame" x="57" y="355" width="300" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="w2J-Cl-3sV"/>
                                     <constraint firstAttribute="height" constant="18" id="wmm-to-yFO"/>
@@ -39,30 +39,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has passed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Q-zK-Cfk">
-                                <rect key="frame" x="163.5" y="326" width="87" height="21"/>
+                                <rect key="frame" x="163.5" y="378" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather at that day in Odessa was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIU-12-1ST">
-                                <rect key="frame" x="75" y="200" width="264" height="21"/>
+                                <rect key="frame" x="75" y="252" width="264" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bs-2V-0lE">
-                                <rect key="frame" x="57" y="226" width="300" height="21"/>
+                                <rect key="frame" x="57" y="278" width="300" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="sVZ-l4-GLo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sVZ-l4-GLo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mg-bG-CGn">
-                                <rect key="frame" x="156.5" y="134" width="101" height="41"/>
+                                <rect key="frame" x="132" y="186" width="150" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="UbU-pn-DjE"/>
+                                    <constraint firstAttribute="width" constant="150" id="UbU-pn-DjE"/>
                                     <constraint firstAttribute="height" constant="41" id="zqR-6Q-cCt"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="-55726490.105214953">
@@ -71,7 +71,6 @@
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-3376555324">
                                     <!--1894-01-01 11:57:56 +0000-->
                                 </date>
-                                <locale key="locale" localeIdentifier="en_UA"/>
                                 <connections>
                                     <action selector="getBirthday:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Of-ia-21l"/>
                                 </connections>
@@ -113,8 +112,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="laW-Nj-Jsp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6i2-LY-JrN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6i2-LY-JrN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

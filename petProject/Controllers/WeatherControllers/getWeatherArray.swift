@@ -12,7 +12,7 @@ func getWeatherArray(date: Date) -> [Float] {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "YYYY-MM-dd"
     
-    guard let weatherDict = try? dataToHistoryWeatherDict(data: readFile()) else {
+    guard let weatherDict = try? dataToHistoryWeatherDict(data: loadFromGithub()) else {
         return []
     }
     

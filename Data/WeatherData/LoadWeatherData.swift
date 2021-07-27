@@ -1,31 +1,30 @@
 //
-//  RegExp.swift
+//  LoadWeatherData.swift
 //  petProject
 //
-//  Created by Vlad Kozlov on 22.7.2021.
+//  Created by Vlad Kozlov on 27.7.2021.
 //
 
 import Foundation
 import SwiftCSV
 
-
-// starts here
-func readFile() throws -> CSV {
-    var data: CSV? = .none
+// loading data from github as csv that would need to be converted to dictionary
+func loadFromGithub() throws -> CSV {
+    let url = URL(string: "https://raw.githubusercontent.com/yavladikku/Meteostat/main/33837.csv")
+    let dataCSV: CSV?
     
     do {
-        data = try CSV(
-                name: "33837",
-                extension: "csv",
-                bundle: .main,
-                delimiter: "\t",
-                encoding: .utf8)
+        dataCSV = try CSV(url: url!, delimiter: "\t", encoding: .utf8, loadColumns: false)
     } catch {
-        throw CSVParseError.generic(message: "error with data")
+        throw CSVParseError.generic(message: "csv error")
     }
     
-    // pass to dataToHistoryWeatherDict
-    return data!
+    guard let data = dataCSV else {
+        print("can't unwrap csv data")
+        throw CSVParseError.generic(message: "csv error")
+    }
+    
+    return data
 }
 
 // returns main result as Dictionary
