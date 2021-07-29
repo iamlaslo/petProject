@@ -21,7 +21,6 @@ func fromBornDateToNow(from: Date) -> String {
         
         if (deltaChecked.month != 0) {
             resultString += ", " + String(deltaChecked.month!) + (deltaChecked.month! > 1 ? " months" : " month")
-//            resultString += deltaChecked.month! > 1 ? "months" : "month"
         }
         
         if (deltaChecked.day != 0) {

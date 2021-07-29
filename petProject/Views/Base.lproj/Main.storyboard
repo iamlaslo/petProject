@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="laW-Nj-Jsp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -75,6 +75,13 @@
                                     <action selector="getBirthday:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Of-ia-21l"/>
                                 </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-Uc-QSN">
+                                <rect key="frame" x="132" y="429" width="150" height="30"/>
+                                <state key="normal" title="Born on the same day"/>
+                                <connections>
+                                    <segue destination="uCq-Bx-kC3" kind="show" id="lPh-Xn-b4J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,6 +92,7 @@
                             <constraint firstItem="8mg-bG-CGn" firstAttribute="top" secondItem="3Wp-BR-hu7" secondAttribute="bottom" constant="5" id="CNc-fD-e9V"/>
                             <constraint firstItem="0bs-2V-0lE" firstAttribute="top" secondItem="lIU-12-1ST" secondAttribute="bottom" constant="5" id="JdV-h5-ce6"/>
                             <constraint firstItem="b2Q-zK-Cfk" firstAttribute="top" secondItem="A79-pE-pOO" secondAttribute="bottom" constant="5" id="LX4-7V-J5w"/>
+                            <constraint firstItem="ICa-Uc-QSN" firstAttribute="top" secondItem="b2Q-zK-Cfk" secondAttribute="bottom" constant="30" id="N6d-Ve-iHI"/>
                             <constraint firstItem="A79-pE-pOO" firstAttribute="top" secondItem="UEn-Vb-yde" secondAttribute="bottom" constant="5" id="NK1-AG-PQW"/>
                             <constraint firstItem="lIU-12-1ST" firstAttribute="top" secondItem="8mg-bG-CGn" secondAttribute="bottom" constant="25" id="OfD-cM-vA7"/>
                             <constraint firstItem="lIU-12-1ST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPs-rt-URJ"/>
@@ -93,6 +101,7 @@
                             <constraint firstItem="b2Q-zK-Cfk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cGz-Ia-ymx"/>
                             <constraint firstItem="3Wp-BR-hu7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="clj-qA-FjD"/>
                             <constraint firstItem="UEn-Vb-yde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0B-TN-khM"/>
+                            <constraint firstItem="ICa-Uc-QSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l5c-Ll-Mnm"/>
                             <constraint firstItem="8mg-bG-CGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vOy-je-YGe"/>
                         </constraints>
                     </view>
@@ -106,6 +115,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="75"/>
+        </scene>
+        <!--Born on the same day-->
+        <scene sceneID="QpF-zg-hpb">
+            <objects>
+                <tableViewController title="Born on the same day" id="uCq-Bx-kC3" customClass="BornViewController" customModule="petProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="l4R-Gt-E7u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="i7i-bj-EfF">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i7i-bj-EfF" id="l3t-nQ-TTX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uCq-Bx-kC3" id="KNj-dA-rGN"/>
+                            <outlet property="delegate" destination="uCq-Bx-kC3" id="oM5-dV-Dyn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Born on the same day" id="xEh-ZS-tFM"/>
+                    <connections>
+                        <outlet property="bornTableView" destination="l4R-Gt-E7u" id="WV5-OG-67z"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8c-8q-Z1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NgP-iI-mvM">

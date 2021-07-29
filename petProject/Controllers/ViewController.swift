@@ -8,13 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak public var getBirthdayDate: UIDatePicker!
     @IBAction func getBirthday(_ sender: UIDatePicker) {
         getUpdate()
     }
-    
-    
     
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var passedLabel: UILabel!
@@ -23,12 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getWikiData()
-        
-//        getUpdate()
+        getUpdate()
     }
-    
-    
     
     func getUpdate() {
         let dateFormatter = DateFormatter()
@@ -41,13 +34,12 @@ class ViewController: UIViewController {
         date.addTimeInterval(timeInterval)
         
         
-        // TODO: MAKE ASYNC
         let queue = DispatchQueue.global()
         
         var weatherString: String = ""
         var fromBornToNowString: String = ""
         
-        queue.async { //[weak self] in
+        queue.async { [self] in //[weak self] in
             weatherString = getWeatherString(date: date)
             fromBornToNowString = fromBornDateToNow(from: getBornDate(date: date))
             
@@ -56,8 +48,5 @@ class ViewController: UIViewController {
                 self.passedLabel.text = fromBornToNowString
             }
         }
-        
-        
-        
     }
 }

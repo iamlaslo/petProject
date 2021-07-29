@@ -16,10 +16,16 @@
 		FB31D90C26A9A45200CAFCBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB31D90B26A9A45200CAFCBB /* Assets.xcassets */; };
 		FB31D90F26A9A45200CAFCBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB31D90D26A9A45200CAFCBB /* LaunchScreen.storyboard */; };
 		FB44108B26A9F9D700F90371 /* getWeatherDataFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44108A26A9F9D700F90371 /* getWeatherDataFromFile.swift */; };
+		FB4C0D6C26B32FDA00F93035 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C0D6B26B32FDA00F93035 /* NetworkManager.swift */; };
+		FB4C0D7326B3391A00F93035 /* Births.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C0D7026B3391A00F93035 /* Births.swift */; };
+		FB4C0D7426B3391A00F93035 /* apiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C0D7126B3391A00F93035 /* apiObject.swift */; };
+		FB4C0D7526B3391A00F93035 /* Wikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C0D7226B3391A00F93035 /* Wikipedia.swift */; };
 		FB7B0C3926AE13E700233F19 /* getWeatherString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B0C3826AE13E700233F19 /* getWeatherString.swift */; };
+		FB93AD0726B3704E00A2CFCC /* BornCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB93AD0626B3704E00A2CFCC /* BornCell.xib */; };
+		FB93AD0926B370B900A2CFCC /* BornCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB93AD0826B370B900A2CFCC /* BornCell.swift */; };
 		FBA884C926AFF7C700292196 /* LoadWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA884C826AFF7C700292196 /* LoadWeatherData.swift */; };
 		FBA884CB26B00BDD00292196 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA884CA26B00BDD00292196 /* ErrorHandling.swift */; };
-		FBA884D826B01A4A00292196 /* getWikiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA884D726B01A4A00292196 /* getWikiData.swift */; };
+		FBAF99A426B3460100997954 /* BornViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF99A326B3460100997954 /* BornViewController.swift */; };
 		FBB3348C26AE07FF00F9EAE4 /* getBornDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3348B26AE07FF00F9EAE4 /* getBornDate.swift */; };
 		FBB3348E26AE082E00F9EAE4 /* fromBornDateToNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3348D26AE082E00F9EAE4 /* fromBornDateToNow.swift */; };
 		FBB3349026AE0D7A00F9EAE4 /* getWeatherArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3348F26AE0D7A00F9EAE4 /* getWeatherArray.swift */; };
@@ -39,10 +45,16 @@
 		FB31D90E26A9A45200CAFCBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB31D91026A9A45200CAFCBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB44108A26A9F9D700F90371 /* getWeatherDataFromFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getWeatherDataFromFile.swift; sourceTree = "<group>"; };
+		FB4C0D6B26B32FDA00F93035 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FB4C0D7026B3391A00F93035 /* Births.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Births.swift; sourceTree = "<group>"; };
+		FB4C0D7126B3391A00F93035 /* apiObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiObject.swift; sourceTree = "<group>"; };
+		FB4C0D7226B3391A00F93035 /* Wikipedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
 		FB7B0C3826AE13E700233F19 /* getWeatherString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getWeatherString.swift; sourceTree = "<group>"; };
+		FB93AD0626B3704E00A2CFCC /* BornCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BornCell.xib; sourceTree = "<group>"; };
+		FB93AD0826B370B900A2CFCC /* BornCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornCell.swift; sourceTree = "<group>"; };
 		FBA884C826AFF7C700292196 /* LoadWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWeatherData.swift; sourceTree = "<group>"; };
 		FBA884CA26B00BDD00292196 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
-		FBA884D726B01A4A00292196 /* getWikiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getWikiData.swift; sourceTree = "<group>"; };
+		FBAF99A326B3460100997954 /* BornViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornViewController.swift; sourceTree = "<group>"; };
 		FBB3348B26AE07FF00F9EAE4 /* getBornDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getBornDate.swift; sourceTree = "<group>"; };
 		FBB3348D26AE082E00F9EAE4 /* fromBornDateToNow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fromBornDateToNow.swift; sourceTree = "<group>"; };
 		FBB3348F26AE0D7A00F9EAE4 /* getWeatherArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getWeatherArray.swift; sourceTree = "<group>"; };
@@ -89,6 +101,8 @@
 		FB31D8FE26A9A45100CAFCBB /* petProject */ = {
 			isa = PBXGroup;
 			children = (
+				FBAF99A526B35B4300997954 /* Cells */,
+				FB4C0D6F26B338F300F93035 /* Models */,
 				FBA884D526B01A2000292196 /* ErrorHandling */,
 				FBA884D426B01A0B00292196 /* Extra */,
 				FBA884D326B01A0100292196 /* Views */,
@@ -100,6 +114,16 @@
 				FB31D90826A9A45100CAFCBB /* petProject.xcdatamodeld */,
 			);
 			path = petProject;
+			sourceTree = "<group>";
+		};
+		FB4C0D6F26B338F300F93035 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB4C0D7126B3391A00F93035 /* apiObject.swift */,
+				FB4C0D7026B3391A00F93035 /* Births.swift */,
+				FB4C0D7226B3391A00F93035 /* Wikipedia.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FB938C4E26A9FF7B00D6A29F /* WeatherData */ = {
@@ -121,8 +145,8 @@
 		FBA884CF26B0198600292196 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FBA884D626B01A3C00292196 /* WikiData */,
 				FB938C4E26A9FF7B00D6A29F /* WeatherData */,
+				FB4C0D6B26B32FDA00F93035 /* NetworkManager.swift */,
 			);
 			name = Data;
 			path = ../Data;
@@ -172,12 +196,13 @@
 			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
-		FBA884D626B01A3C00292196 /* WikiData */ = {
+		FBAF99A526B35B4300997954 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FBA884D726B01A4A00292196 /* getWikiData.swift */,
+				FB93AD0626B3704E00A2CFCC /* BornCell.xib */,
+				FB93AD0826B370B900A2CFCC /* BornCell.swift */,
 			);
-			path = WikiData;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FBB3348A26AE079300F9EAE4 /* Controllers */ = {
@@ -186,6 +211,7 @@
 				FB31D90326A9A45100CAFCBB /* ViewController.swift */,
 				FBA884D226B019C500292196 /* BornDateControllers */,
 				FBA884D126B019AA00292196 /* WeatherControllers */,
+				FBAF99A326B3460100997954 /* BornViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +286,7 @@
 			files = (
 				FB31D90F26A9A45200CAFCBB /* LaunchScreen.storyboard in Resources */,
 				FB31D90C26A9A45200CAFCBB /* Assets.xcassets in Resources */,
+				FB93AD0726B3704E00A2CFCC /* BornCell.xib in Resources */,
 				FB31D90726A9A45100CAFCBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,17 +340,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB93AD0926B370B900A2CFCC /* BornCell.swift in Sources */,
+				FBAF99A426B3460100997954 /* BornViewController.swift in Sources */,
 				FBA884C926AFF7C700292196 /* LoadWeatherData.swift in Sources */,
+				FB4C0D6C26B32FDA00F93035 /* NetworkManager.swift in Sources */,
 				FB7B0C3926AE13E700233F19 /* getWeatherString.swift in Sources */,
 				FB31D90426A9A45100CAFCBB /* ViewController.swift in Sources */,
 				FB44108B26A9F9D700F90371 /* getWeatherDataFromFile.swift in Sources */,
+				FB4C0D7526B3391A00F93035 /* Wikipedia.swift in Sources */,
 				FB31D90026A9A45100CAFCBB /* AppDelegate.swift in Sources */,
+				FB4C0D7326B3391A00F93035 /* Births.swift in Sources */,
 				FBB3349026AE0D7A00F9EAE4 /* getWeatherArray.swift in Sources */,
 				FBB3348E26AE082E00F9EAE4 /* fromBornDateToNow.swift in Sources */,
 				FB31D90226A9A45100CAFCBB /* SceneDelegate.swift in Sources */,
+				FB4C0D7426B3391A00F93035 /* apiObject.swift in Sources */,
 				FBA884CB26B00BDD00292196 /* ErrorHandling.swift in Sources */,
 				FB31D90A26A9A45100CAFCBB /* petProject.xcdatamodeld in Sources */,
-				FBA884D826B01A4A00292196 /* getWikiData.swift in Sources */,
 				FBB3348C26AE07FF00F9EAE4 /* getBornDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,13 +9,7 @@ import Foundation
 
 func getBornDate(date: Date) -> Date {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "YYYY-mm-dd"
-    
-//    guard let bornDate = dateFormatter.date(from: date) else {
-//        print("can't get born date")
-//        return Date()
-//    }
-    
+    dateFormatter.dateFormat = "YYYY-mm-dd"    
     let bornDate = date
     
     return bornDate
