@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import RealmSwift
 
-class BornViewController: UITableViewController {
+class BornTableViewCell: UITableViewCell {
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+}
+
+
+
+class BornViewController: UIViewController {
     
-    let cellID = "cellID"    
-    @IBOutlet var bornTableView: UITableView!
+    @IBAction func refreshButton(_ sender: Any) {
+        bornTableView.reloadData()
+    }
     
-    var model: apiObject?
+    @IBOutlet weak var bornTableView: UITableView!
+    let cellID = "cellID"
     
+    var model: wikiObject?
     
     
     override func viewDidLoad() {
@@ -21,28 +32,45 @@ class BornViewController: UITableViewController {
         
         getWiki()
         
-        bornTableView.register(UINib(nibName: "BornCell", bundle: nil), forCellReuseIdentifier: "cellID")
+        bornTableView.register(BornTableViewCell.self, forCellReuseIdentifier: cellID)
     }
     
     func getWiki() {
-        NetworkManager.shared.getWikiBD(month: 3, day: 28) { [weak self] object in
-            self!.model = object
-            self!.bornTableView.reloadData()
+        NetworkManager.shared.getWikiBD(month: 4, day: 30) { [self] object in
+            if let obj = object {
+                model = obj
+                bornTableView.reloadData()
+            } else {
+                print("ERROR")
+            }
         }
     }
 }
 
-extension BornViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model?.births?.count ?? 0
+extension BornViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let count = model?.births?.count {
+            print(count)
+            return count
+        } else {
+            return 0
+        }
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! BornCell
-        guard let births = model?.births else { return cell }
-        let person = births[indexPath.item]
-        cell.setYear(person: person)
-        cell.setDesc(person: person)
-        return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! BornTableViewCell
+        
+        if let births = model?.births {
+            let person = births[indexPath.item]
+            print(person.year!)
+            
+            if let year = person.year {
+                cell.yearLabel.text = year
+            }
+            
+            
+            return cell
+        } else { return cell }
+        
     }
 }
