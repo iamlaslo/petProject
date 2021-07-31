@@ -34,7 +34,11 @@ class BornViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getWiki()
+        let queue = DispatchQueue.global()
+        queue.async { [self] in
+            getWiki()
+        }
+        
         bornTableView.register(BornTableViewCell.self, forCellReuseIdentifier: cellID)
     }
     

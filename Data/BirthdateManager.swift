@@ -7,6 +7,6 @@
 
 import RealmSwift
 
-class Birthdate: Codable {
-    @Persisted var birthdate: Date?
-}
+//class Birthdate: Codable {
+//    @Persisted var birthdate: Date?
+//}
