@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I was born" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-BR-hu7">
-                                <rect key="frame" x="167.5" y="160" width="79" height="21"/>
+                                <rect key="frame" x="167.5" y="108" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since that day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-Vb-yde">
-                                <rect key="frame" x="152.5" y="329" width="109" height="21"/>
+                                <rect key="frame" x="152.5" y="277" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A79-pE-pOO">
-                                <rect key="frame" x="57" y="355" width="300" height="18"/>
+                                <rect key="frame" x="57" y="303" width="300" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="w2J-Cl-3sV"/>
                                     <constraint firstAttribute="height" constant="18" id="wmm-to-yFO"/>
@@ -39,31 +39,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has passed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Q-zK-Cfk">
-                                <rect key="frame" x="163.5" y="378" width="87" height="21"/>
+                                <rect key="frame" x="163.5" y="326" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather at that day in Odessa was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIU-12-1ST">
-                                <rect key="frame" x="75" y="252" width="264" height="21"/>
+                                <rect key="frame" x="75" y="200" width="264" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bs-2V-0lE">
-                                <rect key="frame" x="57" y="278" width="300" height="21"/>
+                                <rect key="frame" x="57" y="226" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sVZ-l4-GLo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mg-bG-CGn">
-                                <rect key="frame" x="132" y="186" width="150" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-Uc-QSN">
+                                <rect key="frame" x="132" y="377" width="150" height="30"/>
+                                <state key="normal" title="Born on the same day"/>
+                                <connections>
+                                    <segue destination="Gv3-2k-2FW" kind="show" destinationCreationSelector="passDate:sender:" id="OC8-ho-k93"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mg-bG-CGn">
+                                <rect key="frame" x="132" y="134" width="150" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="UbU-pn-DjE"/>
-                                    <constraint firstAttribute="height" constant="41" id="zqR-6Q-cCt"/>
+                                    <constraint firstAttribute="width" constant="150" id="0Uz-gS-h0A"/>
+                                    <constraint firstAttribute="height" constant="41" id="jMd-8V-qia"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="-55726490.105214953">
                                     <!--1999-03-28 00:25:09 +0000-->
@@ -75,13 +82,6 @@
                                     <action selector="getBirthday:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Of-ia-21l"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-Uc-QSN">
-                                <rect key="frame" x="132" y="429" width="150" height="30"/>
-                                <state key="normal" title="Born on the same day"/>
-                                <connections>
-                                    <segue destination="Gv3-2k-2FW" kind="show" destinationCreationSelector="passDate:sender:" id="OC8-ho-k93"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,12 +97,12 @@
                             <constraint firstItem="lIU-12-1ST" firstAttribute="top" secondItem="8mg-bG-CGn" secondAttribute="bottom" constant="25" id="OfD-cM-vA7"/>
                             <constraint firstItem="lIU-12-1ST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPs-rt-URJ"/>
                             <constraint firstItem="3Wp-BR-hu7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ViQ-Ao-Mgx"/>
+                            <constraint firstItem="8mg-bG-CGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vr1-xT-XoD"/>
                             <constraint firstItem="0bs-2V-0lE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YBT-Yb-hde"/>
                             <constraint firstItem="b2Q-zK-Cfk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cGz-Ia-ymx"/>
                             <constraint firstItem="3Wp-BR-hu7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="clj-qA-FjD"/>
                             <constraint firstItem="UEn-Vb-yde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0B-TN-khM"/>
                             <constraint firstItem="ICa-Uc-QSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l5c-Ll-Mnm"/>
-                            <constraint firstItem="8mg-bG-CGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vOy-je-YGe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g1Y-er-Rmr"/>
@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="opP-yA-4dP">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="0HY-kt-mhs" customClass="BornTableViewCell" customModule="petProject" customModuleProvider="target">
@@ -170,32 +170,50 @@
                                     <outlet property="delegate" destination="Gv3-2k-2FW" id="rJp-0J-C2s"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSD-7E-kWs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="L6K-Jo-WkA">
+                                        <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="L6K-Jo-WkA" firstAttribute="centerY" secondItem="LSD-7E-kWs" secondAttribute="centerY" id="Rga-Xo-MIO"/>
+                                    <constraint firstItem="L6K-Jo-WkA" firstAttribute="centerX" secondItem="LSD-7E-kWs" secondAttribute="centerX" id="t0b-n9-3TD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nX2-yy-WQQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LSD-7E-kWs" firstAttribute="trailing" secondItem="nX2-yy-WQQ" secondAttribute="trailing" id="4Lx-1R-moa"/>
+                            <constraint firstItem="LSD-7E-kWs" firstAttribute="leading" secondItem="nX2-yy-WQQ" secondAttribute="leading" id="D6D-TJ-0E4"/>
                             <constraint firstItem="opP-yA-4dP" firstAttribute="top" secondItem="nX2-yy-WQQ" secondAttribute="top" id="GNV-P2-QzE"/>
                             <constraint firstItem="opP-yA-4dP" firstAttribute="leading" secondItem="nX2-yy-WQQ" secondAttribute="leading" id="YQe-Wz-jud"/>
                             <constraint firstItem="nX2-yy-WQQ" firstAttribute="trailing" secondItem="opP-yA-4dP" secondAttribute="trailing" id="cxI-D9-DZg"/>
                             <constraint firstItem="nX2-yy-WQQ" firstAttribute="bottom" secondItem="opP-yA-4dP" secondAttribute="bottom" id="enp-gO-mCs"/>
+                            <constraint firstItem="LSD-7E-kWs" firstAttribute="top" secondItem="WLb-Fo-YB4" secondAttribute="topMargin" id="iPe-Kz-ub0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LSD-7E-kWs" secondAttribute="bottom" id="n1h-su-Rz7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Born on the same day" id="0cN-x4-9fi"/>
                     <connections>
                         <outlet property="bornTableView" destination="opP-yA-4dP" id="Ha4-NY-nlM"/>
+                        <outlet property="loadingView" destination="LSD-7E-kWs" id="S38-p3-xwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2f-lz-LY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="76"/>
+            <point key="canvasLocation" x="1856.521739130435" y="75.669642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NgP-iI-mvM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="laW-Nj-Jsp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6i2-LY-JrN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6i2-LY-JrN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

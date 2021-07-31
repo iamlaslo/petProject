@@ -30,11 +30,12 @@ class BornViewController: UIViewController {
     let monthDataSource: Int? = nil
     let dayDataSource: Int? = nil
     
+    @IBOutlet weak var loadingView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let queue = DispatchQueue.global()
+        let queue = DispatchQueue.global(qos: .utility)
         queue.async { [self] in
             getWiki()
         }
@@ -52,8 +53,10 @@ class BornViewController: UIViewController {
     func getWiki() {
         NetworkManager.shared.getWikiBD(bornDate: formatDate()) { [self] object in
             if let obj = object {
+                self.loadingView.isHidden = true
                 model = obj
                 bornTableView.reloadData()
+                
             } else {
                 print("ERROR in getting Wiki Data")
             }
