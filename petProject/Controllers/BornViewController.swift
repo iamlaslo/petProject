@@ -7,50 +7,66 @@
 
 import UIKit
 import RealmSwift
-
-class BornTableViewCell: UITableViewCell {
-    @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-}
-
-
+import SafariServices
 
 class BornViewController: UIViewController {
-    
-    @IBAction func refreshButton(_ sender: Any) {
-        bornTableView.reloadData()
-    }
     
     @IBOutlet weak var bornTableView: UITableView!
     let cellID = "cellID"
     
     var model: wikiObject?
     
+    var bornDate: Date
+    
+    init?(coder: NSCoder, bornDate: Date) {
+        self.bornDate = bornDate
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    let monthDataSource: Int? = nil
+    let dayDataSource: Int? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getWiki()
-        
         bornTableView.register(BornTableViewCell.self, forCellReuseIdentifier: cellID)
     }
     
+    
+    func formatDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/dd"
+        return formatter.string(from: bornDate)
+    }
+    
     func getWiki() {
-        NetworkManager.shared.getWikiBD(month: 4, day: 30) { [self] object in
+        NetworkManager.shared.getWikiBD(bornDate: formatDate()) { [self] object in
             if let obj = object {
                 model = obj
                 bornTableView.reloadData()
             } else {
-                print("ERROR")
+                print("ERROR in getting Wiki Data")
             }
         }
     }
+    
+    func openWikiLink(link: URL) {
+        let safariVC = SFSafariViewController(url: link)
+        present(safariVC, animated: true)
+    }
 }
 
+
+// MARK: -BornViewController: UITableViewDataSource
 extension BornViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = model?.births?.count {
-            print(count)
             return count
         } else {
             return 0
@@ -58,19 +74,37 @@ extension BornViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! BornTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! BornTableViewCell
         
         if let births = model?.births {
             let person = births[indexPath.item]
-            print(person.year!)
-            
             if let year = person.year {
-                cell.yearLabel.text = year
+                cell.yearLabel?.text = year
             }
-            
-            
-            return cell
-        } else { return cell }
+            if let description = person.description {
+                cell.descriptionLabel?.text = description
+            }
+        }
         
+        return cell
+    }
+}
+
+
+// MARK: -BornViewController: UITableViewDelegate
+extension BornViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var link: String?
+        
+        if let births = model?.births {
+            let person = births[indexPath.item]
+            let wiki = person.wikipedia!
+            for item in wiki {
+                link = item.link!
+            }
+        }
+        
+        let linkToOpen = URL(string: link!)
+        openWikiLink(link: linkToOpen!)
     }
 }

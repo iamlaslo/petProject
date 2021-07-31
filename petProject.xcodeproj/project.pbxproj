@@ -13,6 +13,8 @@
 		FB0F7F1826B5883E00DE859A /* Births.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1526B5883E00DE859A /* Births.swift */; };
 		FB0F7F1926B5883E00DE859A /* wikiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1626B5883E00DE859A /* wikiObject.swift */; };
 		FB0F7F1A26B5883E00DE859A /* Wikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1726B5883E00DE859A /* Wikipedia.swift */; };
+		FB0F7F1D26B5CE6800DE859A /* BornTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */; };
+		FB0F7F1F26B5CEDF00DE859A /* BirthdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1E26B5CEDF00DE859A /* BirthdateManager.swift */; };
 		FB31D90026A9A45100CAFCBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31D8FF26A9A45100CAFCBB /* AppDelegate.swift */; };
 		FB31D90226A9A45100CAFCBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31D90126A9A45100CAFCBB /* SceneDelegate.swift */; };
 		FB31D90426A9A45100CAFCBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31D90326A9A45100CAFCBB /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		FB0F7F1526B5883E00DE859A /* Births.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Births.swift; sourceTree = "<group>"; };
 		FB0F7F1626B5883E00DE859A /* wikiObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wikiObject.swift; sourceTree = "<group>"; };
 		FB0F7F1726B5883E00DE859A /* Wikipedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
+		FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornTableViewCell.swift; sourceTree = "<group>"; };
+		FB0F7F1E26B5CEDF00DE859A /* BirthdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateManager.swift; sourceTree = "<group>"; };
 		FB31D8FC26A9A45100CAFCBB /* petProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB31D8FF26A9A45100CAFCBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB31D90126A9A45100CAFCBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB0F7F1B26B5CE5E00DE859A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FB31D8F326A9A45100CAFCBB = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		FB31D8FE26A9A45100CAFCBB /* petProject */ = {
 			isa = PBXGroup;
 			children = (
+				FB0F7F1B26B5CE5E00DE859A /* Cells */,
 				FB4C0D6F26B338F300F93035 /* Models */,
 				FBA884D526B01A2000292196 /* ErrorHandling */,
 				FBA884D426B01A0B00292196 /* Extra */,
@@ -148,6 +161,7 @@
 				FB938C4E26A9FF7B00D6A29F /* WeatherData */,
 				FB4C0D6B26B32FDA00F93035 /* NetworkManager.swift */,
 				FB0F7F1126B56E3F00DE859A /* RealmManager.swift */,
+				FB0F7F1E26B5CEDF00DE859A /* BirthdateManager.swift */,
 			);
 			name = Data;
 			path = ../Data;
@@ -339,6 +353,7 @@
 				FB4C0D6C26B32FDA00F93035 /* NetworkManager.swift in Sources */,
 				FB7B0C3926AE13E700233F19 /* getWeatherString.swift in Sources */,
 				FB31D90426A9A45100CAFCBB /* ViewController.swift in Sources */,
+				FB0F7F1D26B5CE6800DE859A /* BornTableViewCell.swift in Sources */,
 				FB44108B26A9F9D700F90371 /* getWeatherDataFromFile.swift in Sources */,
 				FB31D90026A9A45100CAFCBB /* AppDelegate.swift in Sources */,
 				FBB3349026AE0D7A00F9EAE4 /* getWeatherArray.swift in Sources */,
@@ -349,6 +364,7 @@
 				FBA884CB26B00BDD00292196 /* ErrorHandling.swift in Sources */,
 				FB31D90A26A9A45100CAFCBB /* petProject.xcdatamodeld in Sources */,
 				FBB3348C26AE07FF00F9EAE4 /* getBornDate.swift in Sources */,
+				FB0F7F1F26B5CEDF00DE859A /* BirthdateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

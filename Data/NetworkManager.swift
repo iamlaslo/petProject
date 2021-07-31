@@ -19,12 +19,11 @@ class NetworkManager {
     
     var url = "https://byabbe.se/on-this-day/3/28/births.json"
     
-    func getWikiBD(month: Int, day: Int, completion: @escaping (wikiObject?) -> Void) {
-        AF.request("https://byabbe.se/on-this-day/\(month)/\(day)/births.json").responseObject { (response: DataResponse<wikiObject, AFError>) in
+    func getWikiBD(bornDate: String, completion: @escaping (wikiObject?) -> Void) {
+        AF.request("https://byabbe.se/on-this-day/\(bornDate)/births.json").responseObject { (response: DataResponse<wikiObject, AFError>) in
             if response.error == nil {
                 do {
                     let obj = try response.result.get()
-//                    print(obj)
                     completion(obj)
                 } catch {
                     completion(nil)

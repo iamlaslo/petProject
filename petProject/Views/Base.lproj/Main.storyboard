@@ -79,7 +79,7 @@
                                 <rect key="frame" x="132" y="429" width="150" height="30"/>
                                 <state key="normal" title="Born on the same day"/>
                                 <connections>
-                                    <segue destination="Gv3-2k-2FW" kind="show" id="OC8-ho-k93"/>
+                                    <segue destination="Gv3-2k-2FW" kind="show" destinationCreationSelector="passDate:sender:" id="OC8-ho-k93"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0HY-kt-mhs" customClass="BornTableViewCell" customModule="petProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="0HY-kt-mhs" customClass="BornTableViewCell" customModule="petProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0HY-kt-mhs" id="9fL-uQ-O8B">
@@ -136,13 +136,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0O-CQ-WzW">
-                                                    <rect key="frame" x="35" y="11.5" width="36" height="21"/>
+                                                    <rect key="frame" x="35" y="11.5" width="45" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="sMb-ZU-zC1"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB8-T5-3vj">
-                                                    <rect key="frame" x="81" y="11.5" width="298" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB8-T5-3vj">
+                                                    <rect key="frame" x="90" y="11.5" width="289" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -177,13 +180,7 @@
                             <constraint firstItem="nX2-yy-WQQ" firstAttribute="bottom" secondItem="opP-yA-4dP" secondAttribute="bottom" id="enp-gO-mCs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Born on the same day" id="0cN-x4-9fi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="4S6-QH-kAf">
-                            <connections>
-                                <action selector="refreshButton:" destination="Gv3-2k-2FW" id="KLC-5E-8ao"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Born on the same day" id="0cN-x4-9fi"/>
                     <connections>
                         <outlet property="bornTableView" destination="opP-yA-4dP" id="Ha4-NY-nlM"/>
                     </connections>

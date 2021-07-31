@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var passedLabel: UILabel!
     
+    @IBSegueAction func passDate(_ coder: NSCoder, sender: Any?) -> BornViewController? {
+        return BornViewController(coder: coder, bornDate: date!)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +26,15 @@ class ViewController: UIViewController {
         getUpdate()
     }
     
+    var date: Date?
+    
     func getUpdate() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-mm-dd"
         dateFormatter.timeZone = TimeZone(abbreviation: "IDT")
         
-        var date = getBirthdayDate.date
+        date = getBirthdayDate.date
+        guard var date = date else { fatalError("bd date get error") }
         
         let timeInterval: TimeInterval = 10_000.0
         date.addTimeInterval(timeInterval)
@@ -39,7 +45,7 @@ class ViewController: UIViewController {
         var weatherString: String = ""
         var fromBornToNowString: String = ""
         
-        queue.async { [self] in //[weak self] in
+        queue.async { [self] in
             weatherString = getWeatherString(date: date)
             fromBornToNowString = fromBornDateToNow(from: getBornDate(date: date))
             
