@@ -15,6 +15,10 @@
 		FB0F7F1A26B5883E00DE859A /* Wikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1726B5883E00DE859A /* Wikipedia.swift */; };
 		FB0F7F1D26B5CE6800DE859A /* BornTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */; };
 		FB0F7F1F26B5CEDF00DE859A /* BirthdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1E26B5CEDF00DE859A /* BirthdateManager.swift */; };
+		FB25236C26B6D7BB00FFABE7 /* getZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25236B26B6D7BB00FFABE7 /* getZodiacSign.swift */; };
+		FB25236E26B72FAF00FFABE7 /* getHoroscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25236D26B72FAF00FFABE7 /* getHoroscope.swift */; };
+		FB25237026B736C400FFABE7 /* HoroscopeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25236F26B736C400FFABE7 /* HoroscopeModels.swift */; };
+		FB25237226B738C600FFABE7 /* HoroscopeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25237126B738C600FFABE7 /* HoroscopeStruct.swift */; };
 		FB31D90026A9A45100CAFCBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31D8FF26A9A45100CAFCBB /* AppDelegate.swift */; };
 		FB31D90226A9A45100CAFCBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31D90126A9A45100CAFCBB /* SceneDelegate.swift */; };
 		FB31D90426A9A45100CAFCBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31D90326A9A45100CAFCBB /* ViewController.swift */; };
@@ -44,6 +48,10 @@
 		FB0F7F1726B5883E00DE859A /* Wikipedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
 		FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornTableViewCell.swift; sourceTree = "<group>"; };
 		FB0F7F1E26B5CEDF00DE859A /* BirthdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateManager.swift; sourceTree = "<group>"; };
+		FB25236B26B6D7BB00FFABE7 /* getZodiacSign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getZodiacSign.swift; sourceTree = "<group>"; };
+		FB25236D26B72FAF00FFABE7 /* getHoroscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getHoroscope.swift; sourceTree = "<group>"; };
+		FB25236F26B736C400FFABE7 /* HoroscopeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModels.swift; sourceTree = "<group>"; };
+		FB25237126B738C600FFABE7 /* HoroscopeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeStruct.swift; sourceTree = "<group>"; };
 		FB31D8FC26A9A45100CAFCBB /* petProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB31D8FF26A9A45100CAFCBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB31D90126A9A45100CAFCBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +143,8 @@
 				FB0F7F1626B5883E00DE859A /* wikiObject.swift */,
 				FB0F7F1726B5883E00DE859A /* Wikipedia.swift */,
 				FB0F7F0F26B56AB100DE859A /* model.swift */,
+				FB25236F26B736C400FFABE7 /* HoroscopeModels.swift */,
+				FB25237126B738C600FFABE7 /* HoroscopeStruct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,8 +189,10 @@
 		FBA884D226B019C500292196 /* BornDateControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB25236B26B6D7BB00FFABE7 /* getZodiacSign.swift */,
 				FBB3348B26AE07FF00F9EAE4 /* getBornDate.swift */,
 				FBB3348D26AE082E00F9EAE4 /* fromBornDateToNow.swift */,
+				FB25236D26B72FAF00FFABE7 /* getHoroscope.swift */,
 			);
 			path = BornDateControllers;
 			sourceTree = "<group>";
@@ -352,6 +364,9 @@
 				FBA884C926AFF7C700292196 /* LoadWeatherData.swift in Sources */,
 				FB4C0D6C26B32FDA00F93035 /* NetworkManager.swift in Sources */,
 				FB7B0C3926AE13E700233F19 /* getWeatherString.swift in Sources */,
+				FB25237026B736C400FFABE7 /* HoroscopeModels.swift in Sources */,
+				FB25236E26B72FAF00FFABE7 /* getHoroscope.swift in Sources */,
+				FB25236C26B6D7BB00FFABE7 /* getZodiacSign.swift in Sources */,
 				FB31D90426A9A45100CAFCBB /* ViewController.swift in Sources */,
 				FB0F7F1D26B5CE6800DE859A /* BornTableViewCell.swift in Sources */,
 				FB44108B26A9F9D700F90371 /* getWeatherDataFromFile.swift in Sources */,
@@ -365,6 +380,7 @@
 				FB31D90A26A9A45100CAFCBB /* petProject.xcdatamodeld in Sources */,
 				FBB3348C26AE07FF00F9EAE4 /* getBornDate.swift in Sources */,
 				FB0F7F1F26B5CEDF00DE859A /* BirthdateManager.swift in Sources */,
+				FB25237226B738C600FFABE7 /* HoroscopeStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,6 +41,8 @@ class BornViewController: UIViewController {
         }
         
         bornTableView.register(BornTableViewCell.self, forCellReuseIdentifier: cellID)
+        
+        debugPrint()
     }
     
     

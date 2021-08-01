@@ -28,9 +28,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A79-pE-pOO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A79-pE-pOO">
                                 <rect key="frame" x="57" y="303" width="300" height="18"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="01P-df-9cl"/>
                                     <constraint firstAttribute="width" constant="300" id="w2J-Cl-3sV"/>
                                     <constraint firstAttribute="height" constant="18" id="wmm-to-yFO"/>
                                 </constraints>
@@ -50,12 +51,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bs-2V-0lE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bs-2V-0lE">
                                 <rect key="frame" x="57" y="226" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sVZ-l4-GLo"/>
+                                    <constraint firstAttribute="height" constant="21" id="ws2-zM-gkT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -82,33 +84,64 @@
                                     <action selector="getBirthday:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Of-ia-21l"/>
                                 </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Zodiac sign is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-fU-mc4">
+                                <rect key="frame" x="135.5" y="437" width="143.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-Ep-j2p">
+                                <rect key="frame" x="57" y="463" width="300" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="NNS-FD-Fc9"/>
+                                    <constraint firstAttribute="height" constant="22" id="hfD-DZ-8Rl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-te-rJ2">
+                                <rect key="frame" x="165" y="490" width="84" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Horoscope"/>
+                                <connections>
+                                    <action selector="horoscopeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOL-qO-wN4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0ga-te-rJ2" firstAttribute="top" secondItem="3x9-Ep-j2p" secondAttribute="bottom" constant="5" id="3eY-89-UmU"/>
                             <constraint firstItem="UEn-Vb-yde" firstAttribute="top" secondItem="0bs-2V-0lE" secondAttribute="bottom" constant="30" id="5R0-mM-31m"/>
                             <constraint firstItem="A79-pE-pOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="67R-p7-2d9"/>
                             <constraint firstItem="8mg-bG-CGn" firstAttribute="top" secondItem="3Wp-BR-hu7" secondAttribute="bottom" constant="5" id="6RU-65-mTe"/>
                             <constraint firstItem="8mg-bG-CGn" firstAttribute="top" secondItem="3Wp-BR-hu7" secondAttribute="bottom" constant="5" id="CNc-fD-e9V"/>
+                            <constraint firstItem="0ga-te-rJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HGs-sW-7CD"/>
                             <constraint firstItem="0bs-2V-0lE" firstAttribute="top" secondItem="lIU-12-1ST" secondAttribute="bottom" constant="5" id="JdV-h5-ce6"/>
                             <constraint firstItem="b2Q-zK-Cfk" firstAttribute="top" secondItem="A79-pE-pOO" secondAttribute="bottom" constant="5" id="LX4-7V-J5w"/>
                             <constraint firstItem="ICa-Uc-QSN" firstAttribute="top" secondItem="b2Q-zK-Cfk" secondAttribute="bottom" constant="30" id="N6d-Ve-iHI"/>
                             <constraint firstItem="A79-pE-pOO" firstAttribute="top" secondItem="UEn-Vb-yde" secondAttribute="bottom" constant="5" id="NK1-AG-PQW"/>
                             <constraint firstItem="lIU-12-1ST" firstAttribute="top" secondItem="8mg-bG-CGn" secondAttribute="bottom" constant="25" id="OfD-cM-vA7"/>
+                            <constraint firstItem="Aej-fU-mc4" firstAttribute="top" secondItem="ICa-Uc-QSN" secondAttribute="bottom" constant="30" id="P2L-Mi-E1f"/>
+                            <constraint firstItem="Aej-fU-mc4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pof-l6-aIw"/>
                             <constraint firstItem="lIU-12-1ST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPs-rt-URJ"/>
                             <constraint firstItem="3Wp-BR-hu7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ViQ-Ao-Mgx"/>
                             <constraint firstItem="8mg-bG-CGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vr1-xT-XoD"/>
                             <constraint firstItem="0bs-2V-0lE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YBT-Yb-hde"/>
                             <constraint firstItem="b2Q-zK-Cfk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cGz-Ia-ymx"/>
                             <constraint firstItem="3Wp-BR-hu7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="clj-qA-FjD"/>
+                            <constraint firstItem="3x9-Ep-j2p" firstAttribute="top" secondItem="Aej-fU-mc4" secondAttribute="bottom" constant="5" id="dsM-wm-xuN"/>
                             <constraint firstItem="UEn-Vb-yde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0B-TN-khM"/>
                             <constraint firstItem="ICa-Uc-QSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l5c-Ll-Mnm"/>
+                            <constraint firstItem="3x9-Ep-j2p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWB-gV-CAK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g1Y-er-Rmr"/>
                     <connections>
                         <outlet property="getBirthdayDate" destination="8mg-bG-CGn" id="71Y-cU-etG"/>
                         <outlet property="passedLabel" destination="A79-pE-pOO" id="zRz-Fy-Pjm"/>
+                        <outlet property="signLabel" destination="3x9-Ep-j2p" id="tyK-XG-SRs"/>
                         <outlet property="weatherLabel" destination="0bs-2V-0lE" id="i9u-Y1-6Y6"/>
                     </connections>
                 </viewController>
@@ -177,7 +210,7 @@
                                         <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                                 <constraints>
                                     <constraint firstItem="L6K-Jo-WkA" firstAttribute="centerY" secondItem="LSD-7E-kWs" secondAttribute="centerY" id="Rga-Xo-MIO"/>
                                     <constraint firstItem="L6K-Jo-WkA" firstAttribute="centerX" secondItem="LSD-7E-kWs" secondAttribute="centerX" id="t0b-n9-3TD"/>
@@ -229,6 +262,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

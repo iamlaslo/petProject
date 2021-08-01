@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //from
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    var nextID = 0
+                    migration.enumerateObjects(ofType: SignModel.className()) { oldObject, newObject in
+                        let sign = oldObject!["sign"] as! String
+                        newObject!["id"] = nextID
+                        nextID += 1
+                    }
+                }
+            })
+        //to
+        
         return true
     }
 
