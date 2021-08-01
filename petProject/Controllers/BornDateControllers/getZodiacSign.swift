@@ -5,14 +5,11 @@
 //  Created by Vlad Kozlov on 1.8.2021.
 //
 
-import UIKit
 import Alamofire
-import RealmSwift
-import AwaitKit
 
 typealias CompletionHandler = (_ success: Bool) -> Void
 
-func getZodiacSign(date: Date, object: SignModel, completionHandler: @escaping CompletionHandler) -> Void {
+func getZodiacSign(date: Date, signObject: SignModel, completionHandler: @escaping CompletionHandler) -> Void {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .short
     dateFormatter.dateFormat = "YYYY-MM-dd"
@@ -28,21 +25,10 @@ func getZodiacSign(date: Date, object: SignModel, completionHandler: @escaping C
     
     AF.request(urlString, headers: headers).responseString { response in
         if let sign = try? response.result.get() {
-            object.sign = sign
-            RealmManager.shared.writeSignToRealm(model: object)
+            signObject.sign = sign
+            RealmManager.shared.writeSignToRealm(model: signObject)
             flag = true
-            debugPrint(object.sign, "in getSign [0]")
             completionHandler(flag!)
         }
     }
 }
-        
-        
-//            AF.request(urlH).responseJSON { response in
-//                if let parsed = try? response.result.get() {
-//                    let parsedDictionary = parsed as! NSDictionary
-//                    let horoscope = parsedDictionary.object(forKey: "horoscope") as! String
-//        //            toAlert.message = horoscope
-//                }
-//            }
-//            debugPrint(urlH, "in getHoroscope [2]")

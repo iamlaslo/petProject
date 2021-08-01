@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I was born" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-BR-hu7">
-                                <rect key="frame" x="167.5" y="108" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-BR-hu7">
+                                <rect key="frame" x="158" y="108" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since that day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-Vb-yde">
-                                <rect key="frame" x="152.5" y="277" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="151.5" y="277" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -35,19 +35,19 @@
                                     <constraint firstAttribute="width" constant="300" id="w2J-Cl-3sV"/>
                                     <constraint firstAttribute="height" constant="18" id="wmm-to-yFO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has passed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Q-zK-Cfk">
-                                <rect key="frame" x="163.5" y="326" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="164" y="321" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather at that day in Odessa was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIU-12-1ST">
-                                <rect key="frame" x="75" y="200" width="264" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="72.5" y="200" width="269.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -57,12 +57,13 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sVZ-l4-GLo"/>
                                     <constraint firstAttribute="height" constant="21" id="ws2-zM-gkT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-Uc-QSN">
-                                <rect key="frame" x="132" y="377" width="150" height="30"/>
+                                <rect key="frame" x="124" y="372" width="166" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Born on the same day"/>
                                 <connections>
                                     <segue destination="Gv3-2k-2FW" kind="show" destinationCreationSelector="passDate:sender:" id="OC8-ho-k93"/>
@@ -84,26 +85,26 @@
                                     <action selector="getBirthday:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Of-ia-21l"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Zodiac sign is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-fU-mc4">
-                                <rect key="frame" x="135.5" y="437" width="143.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac sign is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-fU-mc4">
+                                <rect key="frame" x="153.5" y="435" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-Ep-j2p">
-                                <rect key="frame" x="57" y="463" width="300" height="22"/>
+                                <rect key="frame" x="57" y="461" width="300" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="NNS-FD-Fc9"/>
                                     <constraint firstAttribute="height" constant="22" id="hfD-DZ-8Rl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-te-rJ2">
-                                <rect key="frame" x="165" y="490" width="84" height="33"/>
+                                <rect key="frame" x="143" y="488" width="128" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Horoscope"/>
+                                <state key="normal" title="Show horoscope"/>
                                 <connections>
                                     <action selector="horoscopeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOL-qO-wN4"/>
                                 </connections>
@@ -119,7 +120,7 @@
                             <constraint firstItem="8mg-bG-CGn" firstAttribute="top" secondItem="3Wp-BR-hu7" secondAttribute="bottom" constant="5" id="CNc-fD-e9V"/>
                             <constraint firstItem="0ga-te-rJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HGs-sW-7CD"/>
                             <constraint firstItem="0bs-2V-0lE" firstAttribute="top" secondItem="lIU-12-1ST" secondAttribute="bottom" constant="5" id="JdV-h5-ce6"/>
-                            <constraint firstItem="b2Q-zK-Cfk" firstAttribute="top" secondItem="A79-pE-pOO" secondAttribute="bottom" constant="5" id="LX4-7V-J5w"/>
+                            <constraint firstItem="b2Q-zK-Cfk" firstAttribute="top" secondItem="A79-pE-pOO" secondAttribute="bottom" id="LX4-7V-J5w"/>
                             <constraint firstItem="ICa-Uc-QSN" firstAttribute="top" secondItem="b2Q-zK-Cfk" secondAttribute="bottom" constant="30" id="N6d-Ve-iHI"/>
                             <constraint firstItem="A79-pE-pOO" firstAttribute="top" secondItem="UEn-Vb-yde" secondAttribute="bottom" constant="5" id="NK1-AG-PQW"/>
                             <constraint firstItem="lIU-12-1ST" firstAttribute="top" secondItem="8mg-bG-CGn" secondAttribute="bottom" constant="25" id="OfD-cM-vA7"/>

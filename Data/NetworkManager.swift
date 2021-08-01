@@ -5,12 +5,8 @@
 //  Created by Vlad Kozlov on 29.7.2021.
 //
 
-import Foundation
 import Alamofire
 import AlamofireObjectMapper
-import RealmSwift
-import ObjectMapper_Realm
-
 
 class NetworkManager {
     static let shared = NetworkManager()

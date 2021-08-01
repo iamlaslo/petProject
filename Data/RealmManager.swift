@@ -5,7 +5,6 @@
 //  Created by Vlad Kozlov on 31.7.2021.
 //
 
-import Foundation
 import RealmSwift
 
 extension Realm {
@@ -27,6 +26,9 @@ class RealmManager {
         realm = try! Realm()
         print("RealmURL: ", realm.configuration.fileURL as Any)
     }
+    
+    
+    // MARK: -SignModel
 
     func writeSignToRealm(model: SignModel) {
         do {
@@ -40,11 +42,30 @@ class RealmManager {
     }
     
     func readSign() -> String {
-        guard let model = realm.objects(SignModel.self).first else { return "buepf" }
+        guard let model = realm.objects(SignModel.self).first else { return "error readSign" }
         let sign = model.sign
         return sign
     }
     
-//    TODO: here
-//    func writeHoroscope(model)
+    
+    // MARK: -HoroscopeModel
+    
+    func writeHoroscope(model: HoroscopeModel) {
+        do {
+            try realm.safeWrite {
+                realm.add(model, update: .modified)
+            }
+        }
+        catch {
+            return
+        }
+    }
+    
+    func readHoroscope() -> String {
+        guard let model = realm.objects(HoroscopeModel.self).first else { return "Try again" }
+        let horoscope = model.horoscope
+        return horoscope
+    }
+    
+    
 }

@@ -16,11 +16,8 @@ func getWeatherArray(date: Date) -> [Float] {
         return []
     }
     
-    let bornDateAsDate = getBornDate(date: date)
-    print(bornDateAsDate)
+    let bornDateAsDate = formatBornDate(date: date)
     let bornDate = dateFormatter.string(from: bornDateAsDate)
-    print(bornDate)
-    
     guard let weatherAtBirthday = weatherDict[bornDate] else {
         return []
     }

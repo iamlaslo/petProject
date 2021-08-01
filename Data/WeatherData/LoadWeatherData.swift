@@ -5,10 +5,9 @@
 //  Created by Vlad Kozlov on 27.7.2021.
 //
 
-import Foundation
 import SwiftCSV
 
-// loading data from github as csv which would need to be converted to dictionary
+// loading data from github as csv which needs to be converted to a dictionary
 func loadFromGithub() throws -> CSV {
     let url = URL(string: "https://raw.githubusercontent.com/yavladikku/Meteostat/main/33837.csv")
     let dataCSV: CSV?

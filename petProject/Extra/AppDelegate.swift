@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //from
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            schemaVersion: 1,
+            schemaVersion: 10,
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < 1) {
                     var nextID = 0
@@ -28,8 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         newObject!["id"] = nextID
                         nextID += 1
                     }
+                    migration.enumerateObjects(ofType: HoroscopeModel.className()) { oldObject, newObject in
+                        let horoscope = oldObject!["horoscope"] as! String
+                        newObject!["id"] = nextID
+                        nextID += 1
+                    }
                 }
             })
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
         //to
         
         return true

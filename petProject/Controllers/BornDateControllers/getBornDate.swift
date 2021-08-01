@@ -7,7 +7,7 @@
 
 import Foundation
 
-func getBornDate(date: Date) -> Date {
+func formatBornDate(date: Date) -> Date {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "YYYY-mm-dd"    
     let bornDate = date

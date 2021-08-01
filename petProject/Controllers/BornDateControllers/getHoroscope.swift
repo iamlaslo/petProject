@@ -7,16 +7,15 @@
 
 import Alamofire
 
-func getHoroscope(sign: String) {
+func getHoroscope(sign: String, horoscopeObject: HoroscopeModel) {
     let url: String = "https://ohmanda.com/api/horoscope/\(sign.lowercased())"
     
     AF.request(url).responseJSON { response in
         if let parsed = try? response.result.get() {
             let parsedDictionary = parsed as! NSDictionary
             let horoscope = parsedDictionary.object(forKey: "horoscope") as! String
-            debugPrint(horoscope)
-//            toAlert.message = horoscope
+            horoscopeObject.horoscope = horoscope
+            RealmManager.shared.writeHoroscope(model: horoscopeObject)
         }
     }
-    debugPrint(url, "in getHoroscope [2]")
 }
