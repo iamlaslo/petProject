@@ -47,7 +47,8 @@ class BornViewController: UIViewController {
     
     func formatDate() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M/dd"
+        formatter.dateFormat = "M/d"
+        debugPrint(formatter.string(from: bornDate), "wikidb")
         return formatter.string(from: bornDate)
     }
     
