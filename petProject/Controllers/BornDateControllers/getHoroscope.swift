@@ -14,8 +14,7 @@ func getHoroscope(sign: String, horoscopeObject: HoroscopeModel) {
         if let parsed = try? response.result.get() {
             let parsedDictionary = parsed as! NSDictionary
             let horoscope = parsedDictionary.object(forKey: "horoscope") as! String
-            horoscopeObject.horoscope = horoscope
-            RealmManager.shared.writeHoroscope(model: horoscopeObject)
+            RealmManager.shared.writeHoroscope(from: horoscope, model: horoscopeObject)
         }
     }
 }

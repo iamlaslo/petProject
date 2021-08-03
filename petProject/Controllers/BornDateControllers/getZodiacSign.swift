@@ -25,8 +25,7 @@ func getZodiacSign(date: Date, signObject: SignModel, completionHandler: @escapi
     
     AF.request(urlString, headers: headers).responseString { response in
         if let sign = try? response.result.get() {
-            signObject.sign = sign
-            RealmManager.shared.writeSignToRealm(model: signObject)
+            RealmManager.shared.writeSignToRealm(from: sign, model: signObject)
             flag = true
             completionHandler(flag!)
         }

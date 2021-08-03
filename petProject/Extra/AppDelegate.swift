@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //from
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            schemaVersion: 10,
+            schemaVersion: 20,
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < 1) {
                     var nextID = 0

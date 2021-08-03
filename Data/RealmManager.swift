@@ -30,9 +30,10 @@ class RealmManager {
     
     // MARK: -SignModel
 
-    func writeSignToRealm(model: SignModel) {
+    func writeSignToRealm(from: String, model: SignModel) {
         do {
             try realm.safeWrite {
+                model.sign = from
                 realm.add(model, update: .modified)
             }
         }
@@ -50,9 +51,10 @@ class RealmManager {
     
     // MARK: -HoroscopeModel
     
-    func writeHoroscope(model: HoroscopeModel) {
+    func writeHoroscope(from: String, model: HoroscopeModel) {
         do {
             try realm.safeWrite {
+                model.horoscope = from
                 realm.add(model, update: .modified)
             }
         }
