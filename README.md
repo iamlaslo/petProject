@@ -1,5 +1,7 @@
 # petProject
 
   During the KeepSolid’s internship, I wanted to create an app, where I could try to use my new knowledge and get ready for the creating of the weatherApp. When I was trying to sleep, I got an idea: what if I would create an app based on the user’s birth date? And I got up and started making it. 
+  
   Here is the short description of the app’s algorithm: user picks his birth date in the Date Picker, and after he closes the picker, the app calculates the amount of time passed from that date, and outputs how many years, months, and days have passed by the Swift’s Date. Also, it show’s what the weather was on that day, shows in the TableView and custom cells what celebrities were born on the same day via the Wiki API, data of which are obtaining by the Alamofire, shows the Zodiac sign of the user and shows his horoscope on this day by the UIKit alerts.
+  
   But there is also some restriction in the use of this app: it shows the weather at the birth date only in Odessa, because of the reason that all of the weather APIs shows the past weather only in the paid subscriptions. I even sign up in Open Weather using my student’s ticket, but it gives only the option of the 1 month back weather. So, after about 2 hours of searching, I found the ID of Odessa’s meteorological station and downloaded the bulk of all station’s data from 1890, the year it just opened! Then I uploaded this file on GitHub, and the app requesting it just like it can do it with the real API.
