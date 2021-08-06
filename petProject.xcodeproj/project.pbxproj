@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDCFC5DFD6C8354A891DF0F0 /* Pods_petProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76ACF3A2B4099EC367A9175 /* Pods_petProject.framework */; };
+		FB0378DE26BD105600712A11 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0378DD26BD105600712A11 /* Models.swift */; };
+		FB0378E126BD10AF00712A11 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0378DF26BD10AF00712A11 /* model.swift */; };
+		FB0378E226BD10AF00712A11 /* HoroscopeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0378E026BD10AF00712A11 /* HoroscopeStruct.swift */; };
+		FB0378E426BD11A800712A11 /* wikiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0378E326BD11A800712A11 /* wikiObject.swift */; };
+		FB0378E926BD135C00712A11 /* Wikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0378E626BD135C00712A11 /* Wikipedia.swift */; };
+		FB0378EB26BD135C00712A11 /* Births.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0378E826BD135C00712A11 /* Births.swift */; };
 		FB0F7F1226B56E3F00DE859A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1126B56E3F00DE859A /* RealmManager.swift */; };
-		FB0F7F1826B5883E00DE859A /* Births.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1526B5883E00DE859A /* Births.swift */; };
-		FB0F7F1926B5883E00DE859A /* wikiObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1626B5883E00DE859A /* wikiObject.swift */; };
-		FB0F7F1A26B5883E00DE859A /* Wikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1726B5883E00DE859A /* Wikipedia.swift */; };
 		FB0F7F1D26B5CE6800DE859A /* BornTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */; };
 		FB25236C26B6D7BB00FFABE7 /* getZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25236B26B6D7BB00FFABE7 /* getZodiacSign.swift */; };
 		FB25236E26B72FAF00FFABE7 /* getHoroscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25236D26B72FAF00FFABE7 /* getHoroscope.swift */; };
@@ -36,11 +38,13 @@
 /* Begin PBXFileReference section */
 		8AE75ACCD5E01746D5AF28D9 /* Pods-petProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petProject.release.xcconfig"; path = "Target Support Files/Pods-petProject/Pods-petProject.release.xcconfig"; sourceTree = "<group>"; };
 		C7832CEA8F330451082461E2 /* Pods-petProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petProject.debug.xcconfig"; path = "Target Support Files/Pods-petProject/Pods-petProject.debug.xcconfig"; sourceTree = "<group>"; };
-		E76ACF3A2B4099EC367A9175 /* Pods_petProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0378DD26BD105600712A11 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FB0378DF26BD10AF00712A11 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		FB0378E026BD10AF00712A11 /* HoroscopeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoroscopeStruct.swift; sourceTree = "<group>"; };
+		FB0378E326BD11A800712A11 /* wikiObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wikiObject.swift; sourceTree = "<group>"; };
+		FB0378E626BD135C00712A11 /* Wikipedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
+		FB0378E826BD135C00712A11 /* Births.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Births.swift; sourceTree = "<group>"; };
 		FB0F7F1126B56E3F00DE859A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		FB0F7F1526B5883E00DE859A /* Births.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Births.swift; sourceTree = "<group>"; };
-		FB0F7F1626B5883E00DE859A /* wikiObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wikiObject.swift; sourceTree = "<group>"; };
-		FB0F7F1726B5883E00DE859A /* Wikipedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wikipedia.swift; sourceTree = "<group>"; };
 		FB0F7F1C26B5CE6800DE859A /* BornTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornTableViewCell.swift; sourceTree = "<group>"; };
 		FB25236B26B6D7BB00FFABE7 /* getZodiacSign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getZodiacSign.swift; sourceTree = "<group>"; };
 		FB25236D26B72FAF00FFABE7 /* getHoroscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getHoroscope.swift; sourceTree = "<group>"; };
@@ -69,19 +73,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDCFC5DFD6C8354A891DF0F0 /* Pods_petProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC4113AF053303D2D9EEFF95 /* Frameworks */ = {
+		FB0378E526BD134100712A11 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				E76ACF3A2B4099EC367A9175 /* Pods_petProject.framework */,
+				FB0378E826BD135C00712A11 /* Births.swift */,
+				FB0378E626BD135C00712A11 /* Wikipedia.swift */,
 			);
-			name = Frameworks;
+			path = Structs;
 			sourceTree = "<group>";
 		};
 		FB0F7F1B26B5CE5E00DE859A /* Cells */ = {
@@ -98,7 +102,6 @@
 				FB31D8FE26A9A45100CAFCBB /* petProject */,
 				FB31D8FD26A9A45100CAFCBB /* Products */,
 				FEDDFD97E09C9C2621CE83BD /* Pods */,
-				CC4113AF053303D2D9EEFF95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,10 +133,12 @@
 		FB4C0D6F26B338F300F93035 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FB0F7F1526B5883E00DE859A /* Births.swift */,
-				FB0F7F1626B5883E00DE859A /* wikiObject.swift */,
-				FB0F7F1726B5883E00DE859A /* Wikipedia.swift */,
+				FB0378E526BD134100712A11 /* Structs */,
+				FB0378E326BD11A800712A11 /* wikiObject.swift */,
+				FB0378E026BD10AF00712A11 /* HoroscopeStruct.swift */,
+				FB0378DF26BD10AF00712A11 /* model.swift */,
 				FB25236F26B736C400FFABE7 /* HoroscopeModels.swift */,
+				FB0378DD26BD105600712A11 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,21 +343,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBAF99A426B3460100997954 /* BornViewController.swift in Sources */,
+				FB0378E926BD135C00712A11 /* Wikipedia.swift in Sources */,
 				FB0F7F1226B56E3F00DE859A /* RealmManager.swift in Sources */,
-				FB0F7F1826B5883E00DE859A /* Births.swift in Sources */,
+				FB0378EB26BD135C00712A11 /* Births.swift in Sources */,
 				FBA884C926AFF7C700292196 /* LoadWeatherData.swift in Sources */,
 				FB4C0D6C26B32FDA00F93035 /* NetworkManager.swift in Sources */,
 				FB7B0C3926AE13E700233F19 /* getWeatherString.swift in Sources */,
+				FB0378DE26BD105600712A11 /* Models.swift in Sources */,
 				FB25237026B736C400FFABE7 /* HoroscopeModels.swift in Sources */,
 				FB25236E26B72FAF00FFABE7 /* getHoroscope.swift in Sources */,
 				FB25236C26B6D7BB00FFABE7 /* getZodiacSign.swift in Sources */,
 				FB31D90426A9A45100CAFCBB /* ViewController.swift in Sources */,
 				FB0F7F1D26B5CE6800DE859A /* BornTableViewCell.swift in Sources */,
 				FB31D90026A9A45100CAFCBB /* AppDelegate.swift in Sources */,
+				FB0378E126BD10AF00712A11 /* model.swift in Sources */,
 				FBB3349026AE0D7A00F9EAE4 /* getWeatherArray.swift in Sources */,
 				FBB3348E26AE082E00F9EAE4 /* fromBornDateToNow.swift in Sources */,
-				FB0F7F1926B5883E00DE859A /* wikiObject.swift in Sources */,
-				FB0F7F1A26B5883E00DE859A /* Wikipedia.swift in Sources */,
+				FB0378E426BD11A800712A11 /* wikiObject.swift in Sources */,
+				FB0378E226BD10AF00712A11 /* HoroscopeStruct.swift in Sources */,
 				FB31D90226A9A45100CAFCBB /* SceneDelegate.swift in Sources */,
 				FBA884CB26B00BDD00292196 /* ErrorHandling.swift in Sources */,
 				FB31D90A26A9A45100CAFCBB /* petProject.xcdatamodeld in Sources */,

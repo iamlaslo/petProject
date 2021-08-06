@@ -107,9 +107,9 @@ extension BornViewController: UITableViewDelegate {
         
         if let births = model?.births {
             let person = births[indexPath.item]
-            let wiki = person.wikipedia!
-            for item in wiki {
-                link = item.link!
+            let wiki = person.wikipedia  //person.wikipedia!
+            for item in wiki! {
+                link = item.wikipedia
             }
         }
         

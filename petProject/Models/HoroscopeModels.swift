@@ -7,7 +7,7 @@
 
 import ObjectMapper
 import RealmSwift
-import ObjectMapper_Realm
+//import ObjectMapper_Realm
 
 class SignModel: Object, Codable {
     @Persisted var sign: String = ""
